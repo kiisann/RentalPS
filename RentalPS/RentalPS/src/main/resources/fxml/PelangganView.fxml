@@ -1,0 +1,42 @@
+<!--<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+
+<VBox spacing="15" alignment="TOP_CENTER"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.PelangganController"
+      prefWidth="650" prefHeight="480"
+      style="-fx-padding:20; -fx-background-color:#0F1A38;">
+
+    <Label text="DATA PELANGGAN"
+           style="-fx-text-fill:#00F7FF; -fx-font-size:24; -fx-font-weight:bold;"/>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Nama:" style="-fx-text-fill:white;"/>
+        <TextField fx:id="txtNama" prefWidth="300"/>
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="No HP:" style="-fx-text-fill:white;"/>
+        <TextField fx:id="txtNoHp" prefWidth="300"/>
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="Simpan" onAction="#simpan"/>
+        <Button text="Update" onAction="#update"/>
+        <Button text="Hapus" onAction="#hapus"/>
+        <Button text="Reset" onAction="#reset"/>
+    </HBox>
+
+    <TableView fx:id="tablePelanggan" prefHeight="260" prefWidth="600"
+               onMouseClicked="#handleTableClick">
+        <columns>
+            <TableColumn fx:id="colId" text="ID" prefWidth="80"/>
+            <TableColumn fx:id="colNama" text="Nama" prefWidth="260"/>
+            <TableColumn fx:id="colNoHp" text="No HP" prefWidth="260"/>
+        </columns>
+    </TableView>
+
+</VBox>-->

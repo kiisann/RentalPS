@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="600" prefWidth="950" style="-fx-background-color:#050A18;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashboardController">
+
+    <top>
+        <HBox spacing="10" style="-fx-background-color:#050A18; -fx-padding:10 20 10 20;">
+            <children>
+                <Button fx:id="btnToggleMenu" focusTraversable="false" onAction="#toggleMenu" style="-fx-background-radius:999;                                
+                -fx-background-color:#020617; 
+                -fx-text-fill:#E5E7EB;                                
+                -fx-font-size:16; 
+                -fx-padding:4 10;" text="☰" />
+
+                <Label style="-fx-text-fill: #E5E7EB; -fx-font-size: 21; -fx-font-weight: bold;" text="Admin" />
+            </children>
+        </HBox>
+    </top>
+
+    <center>
+        <StackPane style="-fx-background-color:#050816;">
+            <StackPane fx:id="contentArea" style="-fx-background-color:#050816; -fx-padding:20;" />
+
+            <VBox fx:id="sidebar" maxHeight="520" maxWidth="240" minWidth="240" prefWidth="240" spacing="18" style="-fx-background-color:#0B1120;                          
+                -fx-padding:28 24 28 24;                          
+                -fx-background-radius:18;                          
+                -fx-effect:dropshadow(gaussian, rgba(0,0,0,0.6), 25,0.3,0,4);" visible="false" StackPane.alignment="CENTER_LEFT">
+
+                <StackPane.margin>
+                    <Insets bottom="24" left="24" top="24" />
+                </StackPane.margin>
+
+                <children>
+                    <Label style="-fx-text-fill:#22D3EE; -fx-font-size:26; -fx-font-weight:bold;" text="RENTAL PS" />
+                    <Button fx:id="btnDashboard" onAction="#handleDashboard" text="Dashboard" />
+                    <Button fx:id="btnUser" onAction="#handleUserManagement" text="User Management" />
+                    <Button fx:id="btnPS" onAction="#handlePS" text="Data Konsol" />
+                    <Button fx:id="btnTransaksi" onAction="#handleTransaksi" text="Transaksi" />
+                    <Button fx:id="btnLaporan" onAction="#handleLaporan" text="Laporan" />
+                    <Region VBox.vgrow="ALWAYS" />
+
+                    <Button fx:id="btnLogout" onAction="#handleLogout" text="Log out" />
+                </children>
+            </VBox>
+
+        </StackPane>
+    </center>
+
+</BorderPane>

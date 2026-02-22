@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="TOP_CENTER" spacing="26"
+      style="-fx-padding:26; -fx-background-color:#0D122B;"
+      xmlns="http://javafx.com/javafx/25"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controller.DashboardHomeController">
+
+    <VBox maxWidth="1000" prefWidth="1000" spacing="22">
+        <HBox alignment="CENTER_LEFT" spacing="10">
+            <Label style="-fx-text-fill:#E5E7EB; -fx-font-size:28; -fx-font-weight:bold;"
+                   text="Dashboard" />
+            <HBox HBox.hgrow="ALWAYS" />
+
+            <Label style="
+                -fx-text-fill:#0F1124;
+                -fx-font-size:15;
+                -fx-font-weight:bold;
+                -fx-background-color: linear-gradient(to right,#A855F7,#3B82F6);
+                -fx-padding:8 22;
+                -fx-background-radius:999;
+                -fx-effect: dropshadow(gaussian, rgba(168,85,247,0.4), 18,0.35,0,3);"
+                text="👑 ADMIN ACCESS" />
+        </HBox>
+
+        <Label style="-fx-text-fill:#BFD6E9; -fx-font-size:18; -fx-font-weight:bold;"
+               text="Selamat datang Admin 👋 — kelola sistem rental dengan mudah." />
+
+        <GridPane hgap="22" vgap="22">
+
+            <VBox prefHeight="175" prefWidth="320" spacing="18"
+                  style="-fx-background-color: linear-gradient(to bottom right,#1D2A6A,#23306F);
+                         -fx-padding:22;
+                         -fx-background-radius:26;
+                         -fx-border-radius:26;
+                         -fx-border-color:#4B6CD2;
+                         -fx-border-width:1.2;
+                         -fx-effect:dropshadow(gaussian, rgba(48,60,120,0.55), 20,0.27,0,5);"
+                  GridPane.columnIndex="0">
+
+                <Label style="-fx-text-fill:#C7D5FF; -fx-font-size:15; -fx-font-weight:bold;"
+                       text="Pendapatan Minggu Ini" />
+
+                <Label fx:id="lblPendapatanMingguan"
+                       style="-fx-text-fill:#FFFFFF; -fx-font-size:34; -fx-font-weight:bold;"
+                       text="Rp 0" />
+            </VBox>
+
+            <VBox prefHeight="175" prefWidth="320" spacing="18"
+                  style="-fx-background-color: linear-gradient(to bottom right,#1A3040,#1C384A);
+                         -fx-padding:22;
+                         -fx-background-radius:26;
+                         -fx-border-radius:26;
+                         -fx-border-color:#478AA7;
+                         -fx-border-width:1.2;
+                         -fx-effect:dropshadow(gaussian, rgba(28,100,150,0.45), 20,0.27,0,5);"
+                  GridPane.columnIndex="1">
+
+                <Label style="-fx-text-fill:#9FD3EB; -fx-font-size:15; -fx-font-weight:bold;"
+                       text="Pendapatan Bulan Ini" />
+
+                <Label fx:id="lblPendapatanBulanan"
+                       style="-fx-text-fill:#E2FAFF; -fx-font-size:34; -fx-font-weight:bold;"
+                       text="Rp 0" />
+            </VBox>
+
+            <VBox prefHeight="175" prefWidth="320" spacing="18"
+                  style="-fx-background-color: linear-gradient(to bottom right,#103D2E,#16513D);
+                         -fx-padding:22;
+                         -fx-background-radius:26;
+                         -fx-border-radius:26;
+                         -fx-border-color:#32A66B;
+                         -fx-border-width:1.2;
+                         -fx-effect:dropshadow(gaussian, rgba(10,60,30,0.55), 20,0.27,0,5);"
+                  GridPane.columnIndex="2">
+
+                <Label style="-fx-text-fill:#A8EFC3; -fx-font-size:15; -fx-font-weight:bold;"
+                       text="Transaksi Bulan Ini" />
+
+                <Label fx:id="lblTransaksiBulanan"
+                       style="-fx-text-fill:#E6FFF2; -fx-font-size:34; -fx-font-weight:bold;"
+                       text="0 transaksi" />
+            </VBox>
+
+            <VBox prefHeight="175" spacing="18"
+                  style="-fx-background-color: linear-gradient(to bottom right,#302058,#412C78);
+                         -fx-padding:22;
+                         -fx-background-radius:26;
+                         -fx-border-radius:26;
+                         -fx-border-color:#7E6AF4;
+                         -fx-border-width:1.2;
+                         -fx-effect:dropshadow(gaussian, rgba(100,60,200,0.5), 20,0.27,0,5);"
+                  GridPane.rowIndex="1">
+
+                <Label style="-fx-text-fill:#DFD9FF; -fx-font-size:15; -fx-font-weight:bold;"
+                       text="Pelanggan Baru" />
+
+                <Label fx:id="lblPelangganBulanan"
+                       style="-fx-text-fill:#F8F6FF; -fx-font-size:34; -fx-font-weight:bold;"
+                       text="0 pelanggan" />
+            </VBox>
+
+            <VBox prefHeight="175" spacing="18"
+                  style="-fx-background-color: linear-gradient(to bottom right,#182633,#223447);
+                         -fx-padding:22;
+                         -fx-background-radius:26;
+                         -fx-border-radius:26;
+                         -fx-border-color:#4D91C6;
+                         -fx-border-width:1.2;
+                         -fx-effect:dropshadow(gaussian, rgba(38,100,180,0.45), 20,0.27,0,5);"
+                  GridPane.columnIndex="1" GridPane.rowIndex="1">
+
+                <Label style="-fx-text-fill:#BAD5F2; -fx-font-size:15; -fx-font-weight:bold;"
+                       text="PS Tersedia" />
+
+                <Label fx:id="lblPsTersedia"
+                       style="-fx-text-fill:#E9F2FF; -fx-font-size:34; -fx-font-weight:bold;"
+                       text="0 unit" />
+            </VBox>
+
+            <VBox prefHeight="175" spacing="18"
+                  style="-fx-background-color: linear-gradient(to bottom right,#171F2A,#24313F);
+                         -fx-padding:22;
+                         -fx-background-radius:26;
+                         -fx-border-radius:26;
+                         -fx-border-color:#5AA3D7;
+                         -fx-border-width:1.2;
+                         -fx-effect:dropshadow(gaussian, rgba(60,120,200,0.45), 20,0.27,0,5);"
+                  GridPane.columnIndex="2" GridPane.rowIndex="1">
+
+                <Label style="-fx-text-fill:#C2D9EC; -fx-font-size:15; -fx-font-weight:bold;"
+                       text="PS Disewa" />
+
+                <Label fx:id="lblPsDisewa"
+                       style="-fx-text-fill:#FFFFFF; -fx-font-size:34; -fx-font-weight:bold;"
+                       text="0 unit" />
+            </VBox>
+
+            <columnConstraints>
+                <ColumnConstraints />
+                <ColumnConstraints />
+                <ColumnConstraints />
+            </columnConstraints>
+
+            <rowConstraints>
+                <RowConstraints />
+                <RowConstraints />
+            </rowConstraints>
+
+        </GridPane>
+
+    </VBox>
+</VBox>
