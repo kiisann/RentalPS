@@ -140,12 +140,12 @@ Sesuaikan username dan password jika berbeda.
 
 <strong>Fiki Sulistiawan</strong>  
 Pemrograman Berorientasi Objek – UAS  
-2026  
+2025  
 
 ---
 
 <div align="center">
 
-© 2026 RentalPS — Academic Project
+© 2025 RentalPS — Academic Project
 
 </div>
